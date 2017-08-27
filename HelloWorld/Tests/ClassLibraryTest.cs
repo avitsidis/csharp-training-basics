@@ -37,17 +37,24 @@ namespace HelloWorld.Tests
                 Assert.Contains(ModelAssembly.DefinedTypes, t => t.FullName == "HelloWorld.Model.Person");
             }
 
+
             [Fact]
-            public void Person_class_defines_properties()
+            public void Person_class_defines_LastName_property()
             {
-                const string lastName = "LastName";
-                const string firstName = "FirstName";
-                const string niss = "NISS";
-                Assert.Contains(PersonType.GetProperties(), p => p.Name == lastName);
-                Assert.Contains(PersonType.GetProperties(), p => p.Name == firstName);
-                Assert.Contains(PersonType.GetProperties(), p => p.Name == niss);
+                TypeAssert.TypeHasAPropertyNamed(PersonType,"LastName");
             }
 
+            [Fact]
+            public void Person_class_defines_FirstName_property()
+            {
+                TypeAssert.TypeHasAPropertyNamed(PersonType,"FirstName");
+            }
+
+            [Fact]
+            public void Person_class_defines_NISS_property()
+            {
+                TypeAssert.TypeHasAPropertyNamed(PersonType,"NISS");
+            }
 
             [Fact]
             public void Person_NISS_throws_ArgumentException_When_non_digit_characters_are_provided()
