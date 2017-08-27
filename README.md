@@ -24,10 +24,11 @@
 #### inheritance & polymorphism
 - override ToString() method in class Person (returns "FirstName LastName(NISS)")
 - create a class Consultant that inherits from Person
-- add a Date property HireDate
+- add a Date property Hiredate
+- override ToString() method in class Person (returns "FirstName LastName(NISS) # years of experience")
 - reimplement Birthdate to enforce that consultants must be older than 18 years old
     - this property must be polymorphic
-- override ToString() method in class Person (returns "FirstName LastName(NISS) # years of experience")
+	- throws InvalidArgument if Birthdate is less than 18 years ago
 #### Assembly version
 - change assembly version of Model to 2.0.0.0
 

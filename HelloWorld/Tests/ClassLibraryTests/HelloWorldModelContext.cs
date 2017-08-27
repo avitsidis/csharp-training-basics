@@ -22,5 +22,16 @@ namespace HelloWorld.Tests.ClassLibraryTests
                    .DefinedTypes.Single(t => t.FullName == personTypeFullName);
             }
         }
+        public static Type ConsultantType
+        {
+            get
+            {
+                var consultantTypeFullName = $"{AssemblyName}.Consultant";
+                return Assembly.Load(Assembly.GetExecutingAssembly()
+                   .GetReferencedAssemblies()
+                   .Single(a => a.Name == AssemblyName))
+                   .DefinedTypes.Single(t => t.FullName == consultantTypeFullName);
+            }
+        }
     }
 }
