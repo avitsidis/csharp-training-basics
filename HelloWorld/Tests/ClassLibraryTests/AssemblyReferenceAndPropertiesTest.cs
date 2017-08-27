@@ -24,19 +24,19 @@ namespace HelloWorld.Tests.ClassLibraryTests
         [Fact]
         public void Person_class_defines_LastName_property()
         {
-            TypeAssert.TypeHasAPropertyNamed(HelloWorldModelContext.PersonType, "LastName");
+            TypeAssert.TypeHasAProperty(HelloWorldModelContext.PersonType, "LastName",typeof(string));
         }
 
         [Fact]
         public void Person_class_defines_FirstName_property()
         {
-            TypeAssert.TypeHasAPropertyNamed(HelloWorldModelContext.PersonType, "FirstName");
+            TypeAssert.TypeHasAProperty(HelloWorldModelContext.PersonType, "FirstName", typeof(string));
         }
 
         [Fact]
         public void Person_class_defines_NISS_property()
         {
-            TypeAssert.TypeHasAPropertyNamed(HelloWorldModelContext.PersonType, "NISS");
+            TypeAssert.TypeHasAProperty(HelloWorldModelContext.PersonType, "NISS", typeof(string));
         }
 
         [Fact]
