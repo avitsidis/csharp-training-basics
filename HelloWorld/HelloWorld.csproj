@@ -61,7 +61,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ClassLibraryTests\AssemblyReferenceAndPropertiesTest.cs" />
+    <Compile Include="Tests\ClassLibraryTests\AssemblyVersionTest.cs" />
+    <Compile Include="Tests\ClassLibraryTests\ComputedPropertyTest.cs" />
     <Compile Include="Tests\ClassLibraryTests\HelloWorldModelContext.cs" />
+    <Compile Include="Tests\ClassLibraryTests\InheritanceAndPolymorphismTest.cs" />
     <Compile Include="Tests\ConfigurationTest.cs" />
     <Compile Include="Tests\NugetTest.cs" />
     <Compile Include="Tests\TypeAssert.cs" />
